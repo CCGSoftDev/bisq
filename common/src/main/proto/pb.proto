@@ -724,6 +724,7 @@ message PaymentAccountPayload {
         HalCashAccountPayload hal_cash_account_payload = 24;
         PromptPayAccountPayload prompt_pay_account_payload = 25;
         AdvancedCashAccountPayload advanced_cash_account_payload = 26;
+        AsanPardakhtPayAccountPayload asan_pardakht_pay_account_payload = 27;
     }
     map<string, string> exclude_from_json_data = 15;
 }
@@ -736,6 +737,9 @@ message WeChatPayAccountPayload {
     string account_nr = 1;
 }
 
+message AsanPardakhtPayAccountPayload {
+    string account_nr = 1;
+}
 message ChaseQuickPayAccountPayload {
     string email = 1;
     string holder_name = 2;

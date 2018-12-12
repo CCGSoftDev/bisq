@@ -83,6 +83,8 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
     public static final String BLOCK_CHAINS_ID = "BLOCK_CHAINS";
     public static final String PROMPT_PAY_ID = "PROMPT_PAY";
     public static final String ADVANCED_CASH_ID = "ADVANCED_CASH";
+    public static final String ASANPARDAKHT_PAY_ID = "ASANPARDAKHT_PAY";
+
 
     @Deprecated
     public static PaymentMethod OK_PAY;
@@ -116,6 +118,7 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
     public static PaymentMethod BLOCK_CHAINS;
     public static PaymentMethod PROMPT_PAY;
     public static PaymentMethod ADVANCED_CASH;
+    public static PaymentMethod ASANPARDAKHT_PAY;
 
     private static List<PaymentMethod> ALL_VALUES;
 
@@ -236,7 +239,10 @@ public final class PaymentMethod implements PersistablePayload, Comparable {
                     PROMPT_PAY = new PaymentMethod(PROMPT_PAY_ID, DAY, maxTradeLimitLowRisk),
 
                     // Altcoins
-                    BLOCK_CHAINS = new PaymentMethod(BLOCK_CHAINS_ID, DAY, maxTradeLimitVeryLowRisk)
+                    BLOCK_CHAINS = new PaymentMethod(BLOCK_CHAINS_ID, DAY, maxTradeLimitVeryLowRisk),
+
+                    //Iran
+                    ASANPARDAKHT_PAY = new PaymentMethod(ASANPARDAKHT_PAY_ID, DAY, maxTradeLimitLowRisk)
             ));
 
             ALL_VALUES.sort((o1, o2) -> {

@@ -80,6 +80,8 @@ public class PaymentAccountFactory {
                 return new PromptPayAccount();
             case PaymentMethod.ADVANCED_CASH_ID:
                 return new AdvancedCashAccount();
+            case PaymentMethod.ASANPARDAKHT_PAY_ID:
+                return new AsanPardakhtPayAccount();
             default:
                 throw new RuntimeException("Not supported PaymentMethod: " + paymentMethod);
         }
