@@ -21,23 +21,25 @@ import bisq.asset.AbstractAssetTest;
 
 import org.junit.Test;
 
-public class BitcoinCashTest extends AbstractAssetTest {
+public class SiaPrimeCoinTest extends AbstractAssetTest {
 
-    public BitcoinCashTest() {
-        super(new BitcoinCash());
+    public SiaPrimeCoinTest() {
+        super(new SiaPrimeCoin());
     }
 
     @Test
     public void testValidAddresses() {
-        assertValidAddress("1HQQgsvLTgN9xD9hNmAgAreakzVzQUSLSH");
-        assertValidAddress("1MEbUJ5v5MdDEqFJGz4SZp58KkaLdmXZ85");
-        assertValidAddress("34dvotXMg5Gxc37TBVV2e5GUAfCFu7Ms4g");
+        assertValidAddress("d9fe1331ed2ae1bbdfe0e2942e84d74b7310648e5a5f14c4980ec2c6a19f08af6894b9060e83");
+        assertValidAddress("205cf3be0f04397ee6cc1f52d8ae47f589a4ef5936949c158b2555df291efb87db2bbbca2031");
     }
 
     @Test
     public void testInvalidAddresses() {
-        assertInvalidAddress("21HQQgsvLTgN9xD9hNmAgAreakzVzQUSLSHa");
-        assertInvalidAddress("1HQQgsvLTgN9xD9hNmAgAreakzVzQUSLSHs");
-        assertInvalidAddress("1HQQgsvLTgN9xD9hNmAgAreakzVzQUSLSH#");
+        assertInvalidAddress("");
+        assertInvalidAddress("205cf3be0f04397ee6cc1f52d8ae47f589a4ef5936949c158b2555df291efb87db2bbbca20311");
+        assertInvalidAddress("205cf3be0f04397ee6cc1f52d8ae47f589a4ef5936949c158b2555df291efb87db2bbbca203");
+        assertInvalidAddress("205cf3be0f04397ee6cc1f52d8ae47f589a4ef5936949c158b2555df291efb87db2bbbca2031#");
+        assertInvalidAddress("bvQpKvb1SswwxVTuyZocHWCVsUeGq7MwoR");
+        assertInvalidAddress("d9fe1331ed2ae1bbdfe0e2942e84d74b7310648e5a5f14c4980ec2c6a19f08af6894b9060E83");
     }
 }

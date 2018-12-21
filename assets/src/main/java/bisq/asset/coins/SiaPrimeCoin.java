@@ -17,12 +17,12 @@
 
 package bisq.asset.coins;
 
-import bisq.asset.Base58BitcoinAddressValidator;
 import bisq.asset.Coin;
+import bisq.asset.RegexAddressValidator;
 
-public class BitcoinCash extends Coin {
+public class SiaPrimeCoin extends Coin {
 
-    public BitcoinCash() {
-        super("Bitcoin Cash", "BCH", new Base58BitcoinAddressValidator());
+    public SiaPrimeCoin() {
+        super("SiaPrimeCoin", "SCP", new RegexAddressValidator("^([0-9a-z]{76})$"));
     }
 }
